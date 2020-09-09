@@ -1,13 +1,13 @@
 import React from 'react'
-import { Button } from 'semantic-ui-react'
+import { Button, Icon } from 'semantic-ui-react'
 
-const ImageExampleAvatar = () => (
-    <Button
-    content='Like'
-    icon='heart'
-    label={{ as: 'a', basic: true, content: '2,048' }}
-    labelPosition='right'
-  />
+const ButtonExampleLabeledIcon = ({labelPosition, text, iconName}) => (
+  <div>
+    <Button icon positive>
+      
+      <Icon name='plus' />
+    </Button>
+  </div>
 )
 
-export default ImageExampleAvatar
+export default ButtonExampleLabeledIcon

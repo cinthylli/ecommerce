@@ -6,7 +6,6 @@ import ButtonIcon from './component/ButtonIcon'
 import Icon from './component/Icon'
 import Menu from './component/Menu'
 import Pagination from './component/Pagination'
-import Modal from './component/Modal'
 
 function App() {
   return (
@@ -14,8 +13,6 @@ function App() {
       <Menu />
       <CardAnimated />
       <CardAnimated />
-      <ButtonIcon />
-      <Icon />
       <Pagination />
     </div>
   );

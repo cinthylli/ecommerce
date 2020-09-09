@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Dropdown, Menu, Form } from 'semantic-ui-react'
 import Search from './Search'
-
+import ButtonIcon from './ButtonIcon'
 export default class MenuExampleSizeMassive extends Component {
   state = { activeItem: 'home' }
 
@@ -50,13 +50,26 @@ export default class MenuExampleSizeMassive extends Component {
         </Menu.Item> */}
 
         <Menu.Menu position='right'>
-          <Dropdown clearable item text='Redeem'>
-            <Dropdown.Menu>
+          <Dropdown
+            clearable
+            floating
+            item
+            placeholder='Add Points'
+            options={[
+              { key: 1, text: '1.000 Pts', value: 1 },
+              { key: 2, text: '3.000 Pts', value: 2 },
+              { key: 3, text: '5.000 Pts', value: 3 },
+            ]} >
+            {/* <Dropdown.Menu>
               <Dropdown.Item>1.000</Dropdown.Item>
               <Dropdown.Item>3.000</Dropdown.Item>
               <Dropdown.Item>5.000</Dropdown.Item>
-            </Dropdown.Menu>
+            </Dropdown.Menu> */}
           </Dropdown>
+          {/* <Menu.Item>
+            <ButtonIcon />
+          </Menu.Item> */}
+
           <Menu.Item>
             Julia
             5000
