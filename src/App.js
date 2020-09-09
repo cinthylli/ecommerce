@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
+import CardAnimated from './component/Card'
 import './App.css';
+import 'semantic-ui-css/semantic.min.css'
+import ButtonIcon from './component/ButtonIcon'
+import Icon from './component/Icon'
+import Menu from './component/Menu'
+import Pagination from './component/Pagination'
+import Modal from './component/Modal'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Menu />
+      <CardAnimated />
+      <CardAnimated />
+      <ButtonIcon />
+      <Icon />
+      <Pagination />
     </div>
   );
 }
