@@ -4,7 +4,7 @@
 import _ from 'lodash'
 import faker from 'faker'
 import React, { Component } from 'react'
-import { Search, Grid, Header, Segment } from 'semantic-ui-react'
+import { Search, Grid } from 'semantic-ui-react'
 
 const source = _.times(5, () => ({
   title: faker.company.companyName(),
@@ -18,7 +18,7 @@ const initialState = { isLoading: false, results: [], value: '' }
 export default class SearchExampleStandard extends Component {
   state = initialState
 
-  handleResultSelect = (e, { result }) => this.setState({ value: result.title || result.category || result.cost})
+  handleResultSelect = (e, { result }) => this.setState({ value: result.category })
 
   handleSearchChange = (e, { value }) => {
     this.setState({ isLoading: true, value })
@@ -27,7 +27,7 @@ export default class SearchExampleStandard extends Component {
       if (this.state.value.length < 1) return this.setState(initialState)
 
       const re = new RegExp(_.escapeRegExp(this.state.value), 'i')
-      const isMatch = (result) => re.test(result.title)
+      const isMatch = (result) => re.test(result.title) || re.test(result.image) || re.test(result.cost)
 
       this.setState({
         isLoading: false,
