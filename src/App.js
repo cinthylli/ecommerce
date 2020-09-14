@@ -6,8 +6,12 @@ import ButtonIcon from './component/ButtonIcon'
 import Icon from './component/Icon'
 import Menu from './component/Menu'
 import Pagination from './component/Pagination'
+import {fetchData} from './api/fetchData'
+
 
 function App() {
+  const state = fetchData('https://rickandmortyapi.com/api/character/1')
+  console.log(state);
   return (
     <div className="App">
       <Menu />
