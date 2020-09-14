@@ -6,7 +6,7 @@ const CardExampleImageCard = ({ product, category, pointsLeft, cost }) => (
     <Card>
         <Image src='https://react.semantic-ui.com/images/avatar/large/daniel.jpg' wrapped ui={false} />
         <Card.Content>
-            <Card.Header>{product}Product</Card.Header>
+            <Card.Header>{product}Product Cinthya</Card.Header>
             <Card.Meta>{category}Categoria</Card.Meta>
             <ButtonAnimated amount={pointsLeft} frontMessage='Need' backMessage='Bring them!' />
             <Modal
